@@ -1,0 +1,30 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/logo.png" alt="Logo">Aarokyalaya Nature Cure
+      </a>
+      
+      <!-- Mobile toggle button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Menu items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-menu-item">
+          <li class="nav-item">
+            <a id="home-link" class="nav-link" [ngClass]="{ 'active': currentMenu === 'home' }" (click)="setActive('home')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="about-link" class="nav-link" [ngClass]="{ 'active': currentMenu === 'about' }" (click)="setActive('about')">About</a>
+          </li>
+          <li class="nav-item">
+            <a id="service-link" class="nav-link" [routerLink]="['/services']" [ngClass]="{ 'active': currentMenu === 'services' }" (click)="setActive('services')">Services</a>
+          </li>
+          <li class="nav-item">
+            <a id="contact-link" class="nav-link" [routerLink]="['/contact']" [ngClass]="{ 'active': currentMenu === 'contact' }" (click)="setActive('contact')">Contact</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  

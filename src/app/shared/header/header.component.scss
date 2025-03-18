@@ -1,0 +1,50 @@
+.custom-nav{
+background-color: darkslategray;
+
+}
+/* Top fixed header */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999; /* High z-index */
+  padding: 0.5em;
+}
+
+/* Change color for active/current menu */
+.nav-link.active {
+  color: #f8f9fa !important; /* Lighter color for active menu */
+  color: #007bff !important; /* Highlight color */
+  border-radius: 5px; /* Rounded edges */
+}
+
+/* Adjust the logo and name */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-height: 70px; /* Adjust logo size */
+  margin-right: 0.5em; /* Spacing between logo and name */
+}
+.nav-menu-item{
+font-size: 1.2em;
+}
+
+/* Space below header for page content */
+body {
+  padding-top: 70px; /* Adjust based on header height */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+}

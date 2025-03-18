@@ -1,0 +1,270 @@
+<!-- <div class="p-3 m-0 border-0 bd-example m-0 border-0"> -->
+
+<!-- <img src="../../assets/home11.jpg" height="520" class="card-img home-img" alt="..."> -->
+<!-- <div class="card text-bg-dark">
+
+<div class="card-img home-img">
+      <div class="card-img-overlay">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    </div>
+    </div>
+  </div> -->
+
+
+<!-- </div> -->
+
+
+<div class="main-content">
+  <section id="home">
+    <div class="m-0 border-0 m-0 border-0">
+      <div class="background-image d-flex justify-content-center align-items-center">
+        <div class="overlay"></div>
+        <div class="text-content">
+          <h3 class="heading-animation">Wellness through nature’s wisdom</h3>
+          <p class="lead text-animation">Healing begins in nature. Restore balance, renew health, and rediscover wellness through naturopathy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="p-3 m-0 border-0 m-0 border-0">
+      <h1 class="heading-animation">Why Choose Us</h1>
+      <div class="about-section">
+        <div class="left-side">
+          <div class="carousel">
+            <div *ngFor="let image of images; let i = index" class="carousel-item" [class.active]="i === currentImageIndex">
+              <img [src]="image" alt="Carousel Image">
+            </div>
+
+            <!-- <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden" (click)="prevImage()">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden" (click)="nextImage()">Next</span>
+                          </button> -->
+
+            <!-- Left and Right Buttons for Manual Navigation
+                        <button class="carousel-btn prev" (click)="prevImage()">&#10094;</button>
+                        <button class="carousel-btn next" (click)="nextImage()">&#10095;</button> -->
+          </div>
+        </div>
+
+        <div class="right-side">
+
+          <div class="content text-animation">
+            <h3 (click)="toggleVision()" class="clickable">Goal</h3>
+            <p>To promote holistic well-being by harnessing the power of nature, providing drug-free healing solutions, and
+              empowering individuals to achieve optimal health through naturopathy, yoga, and lifestyle modifications.</p>
+          </div>
+          <div class="toggle-section">
+            <h3 (click)="toggleVision()" class="clickable">
+              Vision
+            </h3>
+            <div *ngIf="showVision" @fadeIn class="vision-content">
+              <p>Nature cure works on the principle of "Body heals Itself". And the duty of the physician is to assist the Nature Energy to help in treating itself.
+                We assist the bodies healing force to recover from any kind of disease without causing any side effects with our Natural Therapies.</p>
+
+              <h5>Personalized Care </h5>
+              <p>Offer customized treatment plans that cater to individual needs and health goals</p>
+              <h5>Community Wellness </h5>
+              <p>Educate and empower communities about the benefits of naturopathy and holistic living.</p>
+              <h5>Promote Preventive Healthcare </h5>
+              <p>Encourage a proactive approach to health through natural therapies, proper nutrition, and lifestyle modifications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</div>
+
+
+</section>
+
+<section id="services">
+  <div class="p-3 m-0 border-0 m-0 border-0">
+    <h1>Treatments</h1>
+    <h4>Find Relief at Aarokyalaya Nature Cure Yogic Clinic</h4>
+    <!-- <div class=" row row-cols-1 row-cols-md-4 g-4">-->
+
+
+    <div [@staggerAnimation]="isAnimationActive ? true : false" class="cards-container">
+      <div class="card" *ngFor="let card of cardData">
+        <img [src]="card.imgUrl" alt="Card Image" class="card-img" />
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">
+            {{ card.description }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="doctor">
+    <div class="p-3 m-0 border-0 m-0 border-0">
+      <h1>Find Our Team</h1>
+      <div class="content-wrapper"> -->
+<!--  <div class="doctor-profiles">
+      <div class="profile" *ngFor="let doctor of doctors">
+        <img [src]="doctor.imageUrl" alt="{{doctor.name}}" class="profile-image">
+        <div class="profile-info">
+          <h3 class="profile-name">{{ doctor.name }}</h3>
+          <p class="profile-speciality">{{ doctor.speciality }}<br>{{ doctor.description }}</p>
+          <p class="profile-speciality"></p>
+        </div>
+      </div>
+    </div>-->
+
+<!-- 
+        <div class="card-wrapper">
+
+          <div class="profile-card">
+
+            <div class="card-image">
+              <img [src]="this.doctors[0].imageUrl" alt="profile one">
+            </div>
+
+            <ul class="social-icons">
+              <li>
+                <a href="">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+
+            <div class="details">
+              <h2>{{this.doctors[0].name}}
+                <br>
+                <span class="job-title">{{this.doctors[0].speciality}}</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe src="https://www.google.com/maps?q=Aarokyalaya+Nature+Cure+Yoga+Life+Style+Clinic,Madurai,Tamil+Nadu&amp;output=embed"
+            width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen>
+          </iframe>
+        </div>
+
+      
+      <div class="clinic-info">
+        <h2>Aarokyalaya Nature Cure Yoga Life Style Clinic</h2>
+        <p>
+          <strong>Address:</strong> Plot No 52, Door No 4, 1st Floor, Karpaga Nagar 8th St, Muthuramalingapuram, K.Pudur, Madurai,
+          Tamil Nadu-625007</p>
+        <p>
+          <strong>Email:</strong> {{emailId}</p>
+        <p>
+          <strong>Phone:</strong> +91 98765 43210</p>
+        <p>
+          <strong>Business Hours:</strong> Mon-Sat: 9:00 AM - 7:00 PM</p>
+      </div>
+    </div>
+    </div>
+  </section>
+ -->
+
+<section id="contact" style="margin-top: 50px;">
+  <div class="p-3 m-0 border-0 m-0 border-0">
+    <h1> Find Us At</h1>
+
+    <div class="contact-section">
+
+      <div class="card-wrapper">
+
+        <div class="profile-card">
+
+          <div class="card-image">
+            <img [src]="this.doctors[0].imageUrl" alt="profile one">
+          </div>
+
+          <ul class="social-icons">
+            <li>
+              <a href="">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-dribbble"></i>
+              </a>
+            </li>
+          </ul>
+
+          <div class="details">
+            <h2>{{this.doctors[0].name}}
+              <br>
+              <span class="job-title">{{this.doctors[0].speciality}}</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Aarokyalaya+Nature+Cure+Yoga+Life+Style+Clinic,Madurai,Tamil+Nadu&amp;output=embed"
+          width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen>
+        </iframe>
+
+      </div>
+
+      <div class="address-container">
+        <h2>Location</h2>
+        <p>
+          <strong>Address:</strong>
+        </p>
+        <p>Aarokyalaya Nature Cure Yoga Life Style Clinic</p>
+        <p>Plot No 52, Door No 4, 1st Floor, Karpaga Nagar 8th St,</p>
+        <p>Muthuramalingapuram, K.Pudur, Madurai, Tamil Nadu- 625007</p>
+
+        <p>
+          <strong>Email:</strong>
+        </p>
+        <p>
+          <a href="aarokyalaya@gmail.com">{{emailId}}</a>
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+        </p>
+        <p>+91 80722 40875, 98431 40349</p>
+
+        <p>
+          <strong>Business Hours:</strong>
+        </p>
+        <p>Monday - Saturday: 10 AM to 9 PM</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

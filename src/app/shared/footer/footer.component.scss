@@ -1,0 +1,45 @@
+/* Footer styles */
+
+.custom-footer{
+	background-color: darkslategray;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	padding: 3px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+
+	flex-wrap: wrap;
+  }
+  
+  /* Social Media Icons */
+  .footer .social-media-icons a {
+	color: #fff;
+	margin: 0 10px;
+	font-size: 24px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+  }
+  
+  .footer .social-media-icons a:hover {
+	color: #00aced;
+  }
+  
+  /* Copyright message */
+  .footer .copyright {
+	font-size: 14px;
+	margin-top: 5px;
+  }
+  
+  /* Download Icon Section */
+  .footer .download-icon {
+	margin-right: 20px;
+  }
+  
