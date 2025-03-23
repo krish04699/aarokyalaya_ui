@@ -71,12 +71,12 @@ constructor(){}
         description:""
       },
       {
-      title:'Foot Reflexologyy',
+      title:'Foot Reflexology',
       imgUrl:'../../../assets/foot.jpeg',
       description:''
     },
     {
-      title:"OZone Therapy",
+      title:"Ozone Therapy",
       imgUrl:"../../../assets/ozone.png",
       description:""
     },
@@ -91,7 +91,7 @@ constructor(){}
       description:""
     },
     {
-      title:"Stream Bath",
+      title:"Steam Bath",
       imgUrl:"../../../assets/steam-bath.jpg",
       description:""
     },
